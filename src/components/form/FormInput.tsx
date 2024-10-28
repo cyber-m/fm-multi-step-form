@@ -27,7 +27,7 @@ export default function FormInput<TFieldValues extends FieldValues>({
             <FormMessage />
           </div>
           <FormControl>
-            <Input placeholder={placeholder} {...field} type={type} />
+            <Input placeholder={placeholder} {...field} type={type} className="hover:border-purplishBlue" />
           </FormControl>
         </FormItem>
       )}
