@@ -14,8 +14,6 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
   - [Useful resources](#useful-resources)
 - [Author](#author)
 
-*
-
 ## Overview
 
 ### The challenge
