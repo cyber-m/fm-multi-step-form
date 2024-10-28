@@ -2,11 +2,12 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-interface StepProps extends React.HTMLProps<HTMLDivElement> {
+type StepProps = {
   isActive?: boolean;
   children: React.ReactNode;
   stepNumber: number;
-}
+} & React.HTMLProps<HTMLDivElement>;
+
 function Step({ stepNumber, isActive, children }: StepProps) {
   return (
     <div className="flex items-center gap-3 sm:text-center md:flex-col md:text-center">
@@ -25,10 +26,10 @@ function Step({ stepNumber, isActive, children }: StepProps) {
     </div>
   );
 }
-interface StepperProps extends React.HTMLProps<HTMLDivElement> {
-  children?: React.ReactNode; // Optional children prop
+type StepperProps = {
+  children?: React.ReactNode;
   active: number;
-}
+} & React.HTMLProps<HTMLDivElement>;
 
 function Stepper({ active, children, ...props }: StepperProps) {
   return (

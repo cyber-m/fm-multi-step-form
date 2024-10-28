@@ -1,8 +1,8 @@
 import { cn } from "@/lib/utils";
-interface FormStepProps extends React.HTMLProps<HTMLDivElement> {
+type FormStepProps = {
   children?: React.ReactNode;
   className?: string;
-}
+} & React.HTMLProps<HTMLDivElement>;
 
 export default function FormStep({ children, className }: FormStepProps) {
   return (
