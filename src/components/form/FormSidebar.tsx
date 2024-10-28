@@ -57,7 +57,7 @@ export default function FormSidebar({ active, className, image, imageWidth, imag
   return (
     <div
       className={cn(
-        "sm:w-max-full relative z-0 flex h-[568px] w-[274px] min-w-32 justify-start overflow-hidden rounded-lg sm:fixed sm:left-0 sm:top-0 sm:h-48 sm:w-full md:justify-center",
+        "sm:w-max-full relative z-0 flex h-[568px] w-[274px] min-w-32 justify-start overflow-hidden rounded-lg sm:fixed sm:left-0 sm:top-0 sm:h-[172px] sm:overflow-visible sm:w-full md:justify-center",
         className,
       )}
     >
