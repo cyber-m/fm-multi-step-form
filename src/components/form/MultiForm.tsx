@@ -392,8 +392,10 @@ export function MultiForm() {
                     <p className="text-xl font-bold text-purplishBlue">
                       $
                       {`${
-                        form.getValues("addOns")?.reduce((accumulator, addOn) => accumulator + addOn.price, 0) ||
-                        0 + form.getValues("plan")?.price
+                        form
+                          .getValues("addOns")
+                          ?.reduce((accumulator, addOn) => accumulator + addOn.price, form.getValues("plan")?.price) ||
+                        form.getValues("plan")?.price
                       }/${getPeriodShortHand()}`}
                     </p>
                   </div>
