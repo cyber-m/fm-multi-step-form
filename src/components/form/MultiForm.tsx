@@ -143,7 +143,7 @@ export function MultiForm() {
         image="/assets/images/bg-sidebar-mobile.svg"
         className="hidden sm:flex"
       />
-      <div className="relative sm:overflow-visible z-10 flex h-[600px] w-[940px] max-w-full overflow-hidden rounded-2xl bg-white p-4 shadow-lg sm:py-0 sm:h-auto sm:flex-col sm:px-0">
+      <div className="relative sm:max-h-[calc(100vh-156px)] sm:overflow-y-auto z-10 flex h-[600px] w-[940px] max-w-full overflow-hidden rounded-2xl bg-white p-4 shadow-lg sm:py-0 sm:h-auto sm:flex-col sm:px-0">
         <FormSidebar
           imageWidth={274}
           imageHeight={568}
