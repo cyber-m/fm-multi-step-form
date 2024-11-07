@@ -143,7 +143,11 @@ export function MultiForm() {
         image="/assets/images/bg-sidebar-mobile.svg"
         className="hidden sm:flex"
       />
-      <div className="relative sm:max-h-[calc(100svh-156px)] sm:overflow-y-auto flex h-[600px] w-[940px] max-w-full overflow-hidden rounded-2xl bg-white p-4 shadow-lg sm:py-0 sm:h-auto sm:flex-col sm:px-0">
+      <div
+        className={cn(
+          "relative sm:overflow-y-auto flex h-[600px] w-[940px] sm:max-h-[calc(100svh-156px)] max-w-full overflow-hidden rounded-2xl bg-white p-4 shadow-lg sm:py-0 sm:h-auto sm:flex-col sm:px-0",
+        )}
+      >
         <FormSidebar
           imageWidth={274}
           imageHeight={568}
@@ -155,7 +159,10 @@ export function MultiForm() {
         <Form {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
-            className="flex flex-1 flex-col items-center justify-between pl-[40px] pr-[24px] sm:px-6 sm:py-8"
+            className={cn(
+              "flex flex-1 flex-col items-center justify-between pl-[40px] pr-[24px] sm:px-6",
+              activeStep !== 5 ? "sm:py-8" : "sm:py-20",
+            )}
             aria-describedby="step-description"
           >
             {activeStep === 1 && (
@@ -404,7 +411,7 @@ export function MultiForm() {
             )}
 
             {activeStep === 5 && (
-              <FormStep className="grid h-full w-full place-items-center pt-0 px-[60px] sm:px-[0] sm:my-20">
+              <FormStep className="grid h-full w-full place-items-center pt-0 px-[60px] sm:px-[0]">
                 <div className="grid place-items-center">
                   <Image width={80} height={80} src="/assets/images/icon-thank-you.svg" alt="" />
                   <h1 className="mt-8 text-[2rem] font-bold text-primary">Thank You!</h1>
